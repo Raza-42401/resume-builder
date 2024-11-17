@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume</h1>
+        
+        <!-- Resume Form -->
+        <form id="resume-form">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" placeholder="Enter your full name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                
+                <label for="address">Address:</label>
+                <input type="text" id="address" placeholder="Enter your address">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Career Objective</legend>
+                <textarea id="objective" placeholder="Write your career objective here" rows="4"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Education</legend>
+                <label for="degree">Degree:</label>
+                <input type="text" id="degree" placeholder="Enter your degree" required>
+                
+                <label for="institution">Institution:</label>
+                <input type="text" id="institution" placeholder="Enter your institution" required>
+                
+                <label for="grad-year">Year of Graduation:</label>
+                <input type="number" id="grad-year" placeholder="Year of graduation" required>
+                
+                <label for="grade">Grade/Percentage:</label>
+                <input type="text" id="grade" placeholder="Enter your grade or percentage">
+            </fieldset>
+
+            <fieldset>
+                <legend>Work Experience</legend>
+                <label for="job-title">Job Title:</label>
+                <input type="text" id="job-title" placeholder="Enter your job title" required>
+                
+                <label for="company-name">Company Name:</label>
+                <input type="text" id="company-name" placeholder="Enter your company's name" required>
+                
+                <label for="duration">Duration:</label>
+                <input type="text" id="duration" placeholder="Job duration" required>
+                
+                <label for="job-description">Job Description:</label>
+                <textarea id="job-description" placeholder="Describe your job responsibilities" rows="4"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Skills</legend>
+                <input type="text" id="skills" placeholder="Enter your skills, separated by commas" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Sections</legend>
+                <label for="hobbies">Hobbies (Optional):</label>
+                <input type="text" id="hobbies" placeholder="Your hobbies">
+                
+                <label for="languages">Languages (Optional):</label>
+                <input type="text" id="languages" placeholder="Languages you speak">
+            </fieldset>
+            
+            <button type="button" onclick="generateResume()">Create Resume</button>
+            <button type="reset">Clear Form</button>
+        </form>
+
+        <!-- Resume Preview -->
+        <div id="resume-preview">
+            <h2>Resume Preview</h2>
+            <div id="resume"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
